@@ -32,7 +32,7 @@ if product_id and callback_data.get(PRODUCT_ACTION_KEY) == ADD_TO_CART:
     add_qty = 1
     set_qty = 0
     sale_order = command.sale_get_order(context)
-    sale_order._cart_update(product_id=int(product_id), add_qty=float(add_qty), set_qty=float(set_qty))    
+    sale_order._cart_update(product_id, add_qty=float(add_qty), set_qty=float(set_qty))    
 
     # show cart
     data['type'] = 'cart'
